@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_package = "com.xzy.grpc.service.domain";
+
+service Greeter {
+  rpc sayHello (HelloRequest) returns (HelloReply) {}
+  rpc doEcho (HelloRequest) returns (HelloReply){}
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloReply {
+  string message = 1;
+}
